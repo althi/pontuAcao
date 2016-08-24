@@ -16,7 +16,7 @@ $(document).ready(function() {
     
     $.ajax({
         type: 'GET',
-        url: 'http://192.168.0.107:8080/WSPont/webresources/com.usuario/' + mat,
+        url: 'http://localhost:8080/WSPont/webresources/com.usuario/' + mat,
         dataType: 'xml',
         error: function() {
         },
@@ -30,7 +30,7 @@ $(document).ready(function() {
     
     $.ajax({
         type: 'GET',
-        url: 'http://192.168.0.107:8080/WSPont/webresources/com.servidor/' + mat,
+        url: 'http://localhost:8080/WSPont/webresources/com.servidor/' + mat,
         dataType: "xml",
         error: function() {
             console.log("oi");

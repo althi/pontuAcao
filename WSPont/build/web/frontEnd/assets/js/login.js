@@ -8,7 +8,7 @@ $(document).ready(function() {
         } else {
             $.ajax({
                 type: 'GET',
-                url: 'http://192.168.0.107:8080/WSPont/webresources/com.usuario/' + mat,
+                url: 'http://localhost:8080/WSPont/webresources/com.usuario/' + mat,
                 dataType: 'xml',
                 error: function(){
                     console.log("oi");
@@ -19,7 +19,7 @@ $(document).ready(function() {
                     }else {
                         $(response).find('senha').each(function() {
                             if($(this)[0].innerHTML == senha){
-                                window.location = 'http://192.168.0.107:8080/WSPont/inicial.html?matricula=' + mat;
+                                window.location = 'http://localhost:8080/WSPont/inicial.html?matricula=' + mat;
                                 document.cookie = "matricula = " + mat;
                                 console.log(response);
                             } else {
