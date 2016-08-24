@@ -57,7 +57,7 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
 
     @GET
     @Path("{id}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces(MediaType.APPLICATION_XML)
     public Usuario find(@PathParam("id") Integer id) {
         return super.find(id);
     }
@@ -88,5 +88,5 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     protected EntityManager getEntityManager() {
         return em;
     }
-    
+
 }

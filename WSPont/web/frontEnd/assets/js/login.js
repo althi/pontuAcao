@@ -8,16 +8,20 @@ $(document).ready(function() {
         } else {
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:8080/WSPont/webresources/com.usuario/' + mat,
+                url: 'http://192.168.0.107:8080/WSPont/webresources/com.usuario/' + mat,
                 dataType: 'xml',
+                error: function(){
+                    console.log("oi");
+                },
                 success: function(response) {
                     if(response == null){
                         alert("Erro - Usuario Nao Identificado");
                     }else {
                         $(response).find('senha').each(function() {
                             if($(this)[0].innerHTML == senha){
-                                window.location = 'http://localhost:8080/WSPont/inicial.html?matricula=' + mat;
+                                window.location = 'http://192.168.0.107:8080/WSPont/inicial.html?matricula=' + mat;
                                 document.cookie = "matricula = " + mat;
+                                console.log(response);
                             } else {
                                 alert("Senha Incorreta");
                             }

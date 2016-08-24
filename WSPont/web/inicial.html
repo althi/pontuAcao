@@ -34,50 +34,10 @@
 
   <section id="container" >
     <header id="header" class="header black-bg"></header>
-
-      
-      <!--sidebar start-->
-      <aside>
+    <aside>
           <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="profile.html"><img src="frontEnd/assets/img/thiago.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 id="avatarNome" class="centered"></h5>
-              	  	
-                  <li class="mt">
-                      <a class="active" href="inicial.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-
-                  <li class="mt">
-                      <a href="ensino.html">
-                          <i class="fa fa-book"></i>
-                          <span>Ensino</span>
-                      </a>
-                  </li>
-
-                  <li class="mt">
-                      <a href="pesquisa.html">
-                          <i class="fa fa-desktop"></i>
-                          <span>Pesquisa</span>
-                      </a>
-                  </li>
-
-                  <li class="mt">
-                      <a  href="extensao.html">
-                          <i class="fa fa-users"></i>
-                          <span>Extensão</span>
-                      </a>
-                  </li>          
-
-              </ul>
-              <!-- sidebar menu end-->
           </div>
-      </aside>
-      <!--sidebar end-->
+    </aside>
       
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -95,34 +55,27 @@
                       <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                         <div class="box1">
                   <span class="li_note"></span>
-                  <h3>Ensino: 340</h3>
+                  <h3 id="pontEnsino"></h3>
                         </div>
-                  <p><strong>Aprovação em disciplina:</strong> 45 pontos por disciplina</p>
-                  <p><strong>Reprovação em disciplina:</strong> -45 pontos por disciplina</p>
-                  <p><strong>Frequência em disciplina:</strong> 10 pontos para até 4 faltas</p>
                       </div>
                       <div class="col-md-2 col-sm-2 box0">
                         <div class="box1">
                   <span class=" li_display"></span>
-                  <h3>Pesquisa: 0</h3>
+                  <h3 id="pontPesq">Pesquisa: 0</h3>
                         </div>
-                  <p>25 pontos por mês + bônus de 20 por artigo publicado</p>
+                  
                       </div>
                       <div class="col-md-2 col-sm-2 box0">
                         <div class="box1">
                   <span class="li_user"></span>
-                   <h3>Extensão: 30</h3>
+                   <h3 id="pontExt">Extensão: 30</h3>
                         </div>
-                  <p>20 pontos por mês por projeto participante</p>
-                  <p>+15 pontos por palestra, curso,workshop</p>
-                  <p>+5 pontos por dia de frequência à bilbioteca</p>
                       </div>
                       <div class="col-md-2 col-sm-2 box0">
                         <div class="box1">
                   <span class="li_star"></span>
-                  <h3>Total: 370</h3>
+                  <h3 id="pontuacaoTotal"></h3>
                         </div>
-                  <p>Essa é sua pontuAção total!</p>
                       </div>
                       
                     
@@ -138,23 +91,11 @@
                       			</div>
 								<div class="row">
 									<div class="col-sm-6 col-xs-6 goleft">
-										<p><i class="fa fa-database"></i> 70%</p>
+										<p id="freqAula"><i class="fa fa-database"></i> </p>
 									</div>
 	                      		</div>
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
-								<script>
-									var doughnutData = [
-											{
-												value: 70,
-												color:"#68dff0"
-											},
-											{
-												value : 30,
-												color : "#fdfdfd"
-											}
-										];
-										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>
+								
 	                      	</div><! --/grey-panel -->
                       	</div><!-- /col-md-4-->
 
@@ -199,99 +140,15 @@
 					
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
                   
+                  <div id="sidebarDireita"></div>
                   
-      <!-- **********************************************************************************************************************************************************
-      RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->                  
                   
-                  <div class="col-lg-3 ds">
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-                                        
-                     
-
-                       <!-- USERS ONLINE SECTION -->
-						<h3>RANKING DE ALUNOS</h3>
-                      <!-- First Member -->
-                                          <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="frontEnd/assets/img/ui-zac.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">Zac Sniders</a>982 pontos<br/>
-                             <p>Ciência da Computação</p>
-                          </p>
-                        </div>
-                      </div>
-
-
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="frontEnd/assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DIVYA MANIAN</a> 952 pontos<br/>
-                            <p>Ciência da Computação</p>
-                      
-                      		   
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="frontEnd/assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DJ SHERMAN</a> 721 pontos<br/>
-                      		   <p>Ciência da Computação</p>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="frontEnd/assets/img/ui-danro.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DAN ROGERS</a> 645 pontos<br/>
-                      		   <p>Ciência da Computação</p>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Member -->
-  
-                      <!-- Fifth Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="frontEnd/assets/img/ui-sam.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Marcel Newman</a> 458 pontos<br/>
-                      		   <p>Ciência da Computação</p>
-                      		</p>
-                      	</div>
-                      </div>
-
-                        <!-- CALENDAR-->
-                        <div id="calendar" class="mb">
-                            <div class="panel white-panel no-margin">
-                                <div class="panel-body">
-                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                                        <div class="arrow"></div>
-                                        <h3 class="popover-title" style="disadding: none;"></h3>
-                                        <div id="date-popover-content" class="popover-content"></div>
-                                    </div>
-                                    <div id="my-calendar"></div>
-                                </div>
-                            </div>
-                        </div><!-- / calendar -->
-                      
-                  </div><!-- /col-lg-3 -->
+                  
               </div><! --/row -->
           </section>
       </section>
-
-      <!--main content end-->
+ 
+     <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
@@ -323,6 +180,7 @@
     <!--script for this page-->
     <script src="frontEnd/assets/js/sparkline-chart.js"></script>    
     <script src="frontEnd/assets/js/zabuto_calendar.js"></script>	
+    <script src="frontEnd/assets/js/includes.js"></script>  
     <script src="frontEnd/assets/js/inicial.js"></script>	
     <script src="frontEnd/assets/js/global.js"></script>	
 	
@@ -336,7 +194,6 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-<script src="frontEnd/assets/js/includes.js"></script>  
 
   </body>
 </html>
